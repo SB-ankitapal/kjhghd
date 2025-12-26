@@ -24,17 +24,12 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
-              examples:
-                Get User Alice Smith:
-                  value:
-                    id: 142
-                    firstName: Alice
-                    lastName: Smith
-                    email: alice.smith@gmail.com
-                    dateOfBirth: '1997-10-31'
-                    emailVerified: true
-                    signUpDate: '2019-08-24'
+                type: object
+                properties:
+                  testy:
+                    $ref: 'https://x-20656.stoplight-dev.com/api/v1/projects/sb-testing/iatamain/nodes/IATA_Open_Air_JSON_Library_24.4.0.json/components/schemas/ClearingIdentifier?mid=2'
+                    x-stoplight:
+                      id: facngrlgvq9n4
         '404':
           description: User Not Found
       operationId: get-users-userId
